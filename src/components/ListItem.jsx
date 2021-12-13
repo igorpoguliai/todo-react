@@ -1,0 +1,26 @@
+import { ReactComponent as CheckIcon } from "../assets/icons/check.svg";
+import { ReactComponent as RemoveIcon } from "../assets/icons/remove.svg";
+
+export default function ListItem({
+  checked,
+  id,
+  addetDate,
+  note,
+  onCheckedClick,
+  onDeleteClick,
+}) {
+  return (
+    <li className={`list__item ${checked ? "list__item--checked" : ""}`}>
+      <div className="list__item-checkbox">
+        <CheckIcon />
+      </div>
+      <div onClick={() => onCheckedClick(id)} className="list__item-text">
+        {note}
+      </div>
+      <div className="list__item-date">{addetDate}</div>
+      <button onClick={() => onDeleteClick(id)} className="list__item-remove">
+        <RemoveIcon />
+      </button>
+    </li>
+  );
+}
