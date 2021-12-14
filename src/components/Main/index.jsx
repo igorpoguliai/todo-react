@@ -1,5 +1,5 @@
-import List from "../list";
-import ListIdentifiers from "../list-identifiers";
+import List from "../List";
+import ListIdentifiers from "../ListCounters";
 
 export default function Main({ list, setList }) {
   return (

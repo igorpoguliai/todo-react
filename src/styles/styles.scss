@@ -19,7 +19,7 @@ body {
 
 // HEADER
 .header {
-  background-image: url("./images/mountain.png");
+  background-image: url("../../assets/icons/images/mountain.png");
   background-color: #b57dff;
   background-size: cover;
   height: 300px;
@@ -178,6 +178,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.message {
+  $main-font: Montserrat, sans-serif;
+  text-align: center;
+  color: #c2c2c2;
+  font-style: italic;
+  text-decoration: underline;
+
+  &::first-letter {
+    text-transform: uppercase;
   }
 }
 // END MAIN

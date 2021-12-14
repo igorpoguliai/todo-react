@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MainTitle from "../main-title";
-import Form from "../form";
-import Buttons from "../buttons";
+import MainTitle from "../MainTitle";
+import Form from "../Form";
+import Buttons from "../Buttons";
 
 export default function Header({ list, setList }) {
   const [value, setValue] = useState("");
