@@ -10,10 +10,7 @@ export default function ListItem({
   onDeleteClick,
 }) {
   return (
-    <li
-      key={id}
-      className={`list__item ${checked ? "list__item--checked" : ""}`}
-    >
+    <li className={`list__item ${checked ? "list__item--checked" : ""}`}>
       <div className="list__item-checkbox">
         <CheckIcon />
       </div>

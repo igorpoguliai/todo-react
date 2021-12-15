@@ -13,15 +13,24 @@ export default function Buttons({ todos, setTodos }) {
         break;
       case "make all done":
         const isEveryChecked = todos.every((item) => item.checked === true);
-        setTodos(todos.map((item) => ({ ...item, checked: !isEveryChecked })));
-        break;
-      case "sort by date":
         setTodos(
-          todos.sort((a, b) => new Date(b.addetDate) - new Date(a.addetDate))
+          todos.map((item) => ({
+            ...item,
+            checked: !isEveryChecked,
+          }))
         );
         break;
+      case "sort by date":
+        const sortDate = todos.sort(
+          (a, b) =>
+            console.log(new Date(b.addetDate)) -
+            console.log(new Date(a.addetDate))
+        );
+        setTodos([...sortDate]);
+        break;
       case "sort by alphabet":
-        setTodos(todos.sort((a, b) => a.note.localeCompare(b.note)));
+        const sortAlphabet = todos.sort((a, b) => a.todo.localeCompare(b.todo));
+        setTodos([...sortAlphabet]);
         break;
 
       default:

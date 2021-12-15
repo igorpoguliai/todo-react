@@ -1,7 +1,8 @@
 import { useState } from "react";
-import MainTitle from "../MainTitle";
-import Form from "../Form";
-import Buttons from "../Buttons";
+import MainTitle from "../MainTitle/index";
+import Form from "../Form/index";
+import Buttons from "../Buttons/index";
+import { createId } from "../../helpers/randomId";
 
 export default function Header({ list, setList }) {
   const [value, setValue] = useState("");
@@ -13,7 +14,7 @@ export default function Header({ list, setList }) {
       const newNote = {
         todo: value,
         checked: false,
-        id: Math.random(),
+        id: createId(),
         addetDate: new Date().toLocaleString().slice(0, -3),
       };
 
@@ -29,7 +30,7 @@ export default function Header({ list, setList }) {
         <Form
           onSubmit={onAddTodos}
           todo={value}
-          onChange={(event) => setValue(event.target.value)}
+          onInputChange={(event) => setValue(event.target.value)}
         />
         <Buttons todos={list} setTodos={setList} />
       </div>

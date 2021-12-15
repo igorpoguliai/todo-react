@@ -1,24 +1,22 @@
-import ListItem from "../ListItem";
+import ListItem from "../ListItem/index";
 
 export default function List({ todos, setTodos }) {
   function onCheckedClick(clickedItemId) {
-    const noteIsDone = todos.map((item) => {
-      const { checked, id } = item;
+    setTodos(
+      todos.map((item) => {
+        const { checked, id } = item;
 
-      if (id === clickedItemId) {
-        return { ...item, checked: !checked };
-      } else {
-        return item;
-      }
-    });
-
-    setTodos(noteIsDone);
+        if (id === clickedItemId) {
+          return { ...item, checked: !checked };
+        } else {
+          return item;
+        }
+      })
+    );
   }
 
-  function onDeleteClick(removeItemToId) {
-    const newList = todos.filter((item) => item.id !== removeItemToId);
-
-    setTodos(newList);
+  function onDeleteClick(removeItemId) {
+    setTodos(todos.filter((item) => item.id !== removeItemId));
   }
 
   if (todos.length) {
@@ -26,6 +24,7 @@ export default function List({ todos, setTodos }) {
       <ul className="list">
         {todos.map((item) => (
           <ListItem
+            key={item.id}
             checked={item.checked}
             id={item.id}
             todo={item.todo}

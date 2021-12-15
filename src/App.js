@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./styles/reset.css";
-import "./styles/styles.scss";
+import "./styles/stylesHeader.scss";
+import "./styles/stylesMain.scss";
+import "./styles/stylesMedia.scss";
 import Header from "./components/Header/index";
-import Main from "./components/Main";
+import Main from "./components/Main/index";
 
 function App() {
   const [list, setList] = useState([]);

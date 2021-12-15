@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+$main-font: Montserrat, sans-serif;
+$main-color: #ffffff;
+$second-color: #4f4f4f;
+
+body {
+  font-family: $main-font;
+}
+
+.container {
+  max-width: 570px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+.header {
+  background-image: url("../assets/images/mountain.png");
+  background-color: #b57dff;
+  background-size: cover;
+  height: 300px;
+  padding-top: 60px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 73px;
+    color: $main-color;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 60px;
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 21px;
+    color: $second-color;
+    padding-left: 24px;
+    outline: none;
+  }
+
+  .buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 7px;
+
+    &__item {
+      font-family: $main-font;
+      font-size: 12px;
+      line-height: 16px;
+      color: $second-color;
+      border: none;
+      background: #ffffff;
+      border-radius: 4px;
+      padding: 3px 0px;
+      cursor: pointer;
+      width: 100%;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      &:active {
+        transform: scale(0.98);
+        background-color: #e5e5e5;
+        transition: all 200ms;
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+$main-font: Montserrat, sans-serif;
+$main-color: #ffffff;
+$second-color: #4f4f4f;
+
+body {
+  font-family: $main-font;
+}
+
+.container {
+  max-width: 570px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+.list {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -65px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__item {
+    border: 1px solid #eaeaea;
+    font-family: $main-font;
+    color: $second-color;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    padding: 19px 24px 16px;
+
+    &:last-child {
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    &-text {
+      max-width: 320px;
+      width: 100%;
+      word-wrap: break-word;
+    }
+
+    &-date {
+      font-size: 13px;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    &-checkbox {
+      border: 1px solid #c2c2c2;
+      border-radius: 50%;
+      min-width: 20px;
+      height: 20px;
+      margin-right: 14px;
+    }
+  }
+
+  &__item--checked {
+    .list__item-checkbox {
+      background: linear-gradient(
+        124.99deg,
+        rgba(192, 115, 253, 0.47) 6.18%,
+        #9f3294 6.19%,
+        rgba(113, 111, 255, 0.47) 93.82%
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .list__item-text,
+    .list__item-date {
+      text-decoration: line-through;
+      color: #c2c2c2;
+    }
+  }
+}
+
+.list__item-remove {
+  margin-left: auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.list__item-remove svg {
+  width: 14px;
+  height: 14px;
+}
+
+.block {
+  display: flex;
+  gap: 7px;
+  background: transparent;
+  position: relative;
+  top: -55px;
+
+  &__item {
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 18px;
+    color: $main-color;
+    background: linear-gradient(
+      90deg,
+      rgba(192, 115, 253, 0.6) 1.4%,
+      rgba(113, 111, 255, 0.6) 101.33%
+    );
+    height: 28px;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.message {
+  $main-font: Montserrat, sans-serif;
+  text-align: center;
+  color: #c2c2c2;
+  font-style: italic;
+  text-decoration: underline;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
