@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./styles/reset.css";
-import "./styles/stylesHeader.scss";
-import "./styles/stylesMain.scss";
-import "./styles/stylesMedia.scss";
+import "./styles/style.scss";
 import Header from "./components/Header/index";
 import Main from "./components/Main/index";
 

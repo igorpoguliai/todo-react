@@ -15,7 +15,7 @@ export default function Header({ list, setList }) {
         todo: value,
         checked: false,
         id: createId(),
-        addetDate: new Date().toLocaleString().slice(0, -3),
+        addetDate: new Date(),
       };
 
       setList([...list, newNote]);

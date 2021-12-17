@@ -21,11 +21,7 @@ export default function Buttons({ todos, setTodos }) {
         );
         break;
       case "sort by date":
-        const sortDate = todos.sort(
-          (a, b) =>
-            console.log(new Date(b.addetDate)) -
-            console.log(new Date(a.addetDate))
-        );
+        const sortDate = todos.sort((a, b) => b.addetDate - a.addetDate);
         setTodos([...sortDate]);
         break;
       case "sort by alphabet":

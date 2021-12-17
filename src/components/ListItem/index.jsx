@@ -17,7 +17,9 @@ export default function ListItem({
       <div onClick={() => onCheckedClick(id)} className="list__item-text">
         {todo}
       </div>
-      <div className="list__item-date">{addetDate}</div>
+      <div className="list__item-date">
+        {addetDate.toLocaleString().slice(0, -3)}
+      </div>
       <button onClick={() => onDeleteClick(id)} className="list__item-remove">
         <RemoveIcon />
       </button>
